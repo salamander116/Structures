@@ -32,10 +32,6 @@ class Stack<E> {
 	}
 
 	public int size() {
-		return size;
-	}
-
-	public int getTop() {
 		return top;
 	}
 
