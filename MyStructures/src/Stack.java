@@ -17,10 +17,35 @@ class Stack<E> {
 	}
 
 	public void push(E object) {
-		stack[++top] = object;
+		if (!isFull())
+			stack[++top] = object;
 	}
 
 	public E pop() {
+		if (isEmpty())
+			return null;
 		return stack[top--];
 	}
+
+	public E top() {
+		return stack[top];
+	}
+
+	public int size() {
+		return size;
+	}
+
+	public int getTop() {
+		return top;
+	}
+
+	private boolean isEmpty() {
+		return (top == -1);
+
+	}
+
+	private boolean isFull() {
+		return (top == size - 1);
+	}
+
 }
